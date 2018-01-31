@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transavia verhalen</title>
+  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Nav gedeelte -->
+
+<nav class="nav-bar">
+  <ul class="nav-functies">
+      <li><a href="index.html"><img class="logo" src="./afbeeldingen/transavia-stories-logo.png" alt="logo"></a></li>
+      <li>
+        <a href="filter.html">Bladeren</a>
+      </li>
+      <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+      <li><a href="leeslijst.html"><i class="fa fa-bookmark" aria-hidden="true"></i></a><a href="#" class="bookmarkCount"></a></li>
+      <li><a href="aanmeldpagina.html"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+  </ul>
+</nav>
+
+<!-- Header gedeelte: search  -->
+
+<header class="home-header">
+  <aside id="directsearch" class="directsearch-toggle">
+    <h2>Welk verhaal wil je lezen?</h2>
+    <form class="search">
+        <input class="search-item" type="text" name="searchInput" value="Ik heb zin in.." id="searchField">
+        <input class="search-item" type="submit" value="Zoeken" id="submitButton">
+    </form>
+  </aside>
+</header>
+
+<!-- Content Gedeelte -->
+
+<section class="filter">
+  <h1>99 verhalen om de tijd mee te doden</h1>
+  <p>Vind het verhaal waar jij zin in hebt</p>
+  <form>
+    <fieldset>
+      <legend>Genre</legend>
+      <select class="genre" name="genre">
+        <option value="" selected>Genre</option>
+        <option value="Avontuur">Avontuur</option>
+        <option value="Drama">Drama</option>
+        <option value="Spannend">Spannend</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>Niveau</legend>
+        <select class="niveau" name="niveau">
+          <option value="" selected>Niveau</option>
+          <option value="Kinderen">Kinderen</option>
+          <option value="Jongeren">Jongeren</option>
+          <option value="Volwassenen">Volwassenen</option>
+        </select>
+    </fieldset>
+    <fieldset>
+      <legend>Leesduur</legend>
+      <select class="leestijd" name="leestijd">
+        <option value="" selected>Leestijd</option>
+        <option value="vijfminuten">&lt; 5 minuten</option>
+        <option value="tienminuten">&lt; 10 minuten</option>
+        <option value="vijftienminuten">&lt; 15 minuten</option>
+        <option value="alleleestijden">Alle leestijden</option>
+      </select>
+    </fieldset>
+  </form>
+</section>
+
+<section class="sorteren-sectie">
+  <p>Sorteren op: </p>
+  <select class="sorteren" name="sorteren">
+    <option value="Relevant" selected>Relevant</option>
+    <option value="Populair">Populair</option>
+    <option value="Datum">Datum</option>
+  </select>
+</section>
+
+<main>
+<!-- Resultaten: Populair, Aanbevolen etc.. -->
+
+  <section class="resultaten">
+    <h2>Populair</h2>
+    <div class="grid">
+      <article class="verhaal">
+        <ul class="boven">
+          <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+          <li><i class="fa fa-bookmark-o" aria-hidden="true"></i></li>
+        </ul>
+        <header>
+          <h3>Johan Cruijff</h3>
+          <p class="leesduur">3 minuten - 21 Januari</p>
+        </header>
+      </article>
+      <article class="verhaal">
+        <ul class="boven">
+          <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+          <li><i class="fa fa-bookmark-o" aria-hidden="true"></i></li>
+        </ul>
+        <header>
+          <h3>Johan Cruijff</h3>
+          <p class="leesduur">3 minuten - 21 Januari</p>
+        </header>
+      </article>
+      <article class="verhaal">
+        <ul class="boven">
+          <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+          <li><i class="fa fa-bookmark-o" aria-hidden="true"></i></li>
+        </ul>
+        <header>
+          <h3>Johan Cruijff</h3>
+          <p class="leesduur">3 minuten - 21 Januari</p>
+        </header>
+      </article>
+      <article class="verhaal">
+        <ul class="boven">
+          <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+          <li><i class="fa fa-bookmark-o" aria-hidden="true"></i></li>
+        </ul>
+        <header>
+          <h3>Johan Cruijff</h3>
+          <p class="leesduur">3 minuten - 21 Januari</p>
+        </header>
+      </article>
+    </div>
+  </section>
+
+  <section class="resultaten">
+    <h2>Voor jou</h2>
+    <div class="grid-drie">
+    <article class="verhaal">
+      <ul class="boven">
+        <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+        <li><i class="fa fa-bookmark-o" aria-hidden="true"></i></li>
+      </ul>
+      <header>
+        <h3>Johan Cruijff</h3>
+        <p class="leesduur">3 minuten - 21 Januari</p>
+      </header>
+    </article>
+    <article class="verhaal">
+      <ul class="boven">
+        <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+        <li><i class="fa fa-bookmark-o" aria-hidden="true"></i></li>
+      </ul>
+      <header>
+        <h3>Johan Cruijff</h3>
+        <p class="leesduur">3 minuten - 21 Januari</p>
+      </header>
+    </article>
+    <article class="verhaal">
+      <ul class="boven">
+        <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+        <li><i class="fa fa-bookmark-o" aria-hidden="true"></i></li>
+      </ul>
+      <header>
+        <h3>Johan Cruijff</h3>
+        <p class="leesduur">3 minuten - 21 Januari</p>
+      </header>
+    </article>
+    </div>
+  </section>
+</main>
+<aside class="popup">
+  <p>Toegevoegd aan mijn leeslijst</p>
+</aside>
+<footer>
+</footer>
+<script type="text/javascript" src="js/javascript.js"></script>
+</body>
+</html>

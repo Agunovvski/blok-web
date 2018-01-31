@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transavia verhalen</title>
+  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Nav gedeelte -->
+
+<nav class="nav-bar">
+  <ul class="nav-functies">
+      <li><a href="index.html"><img class="logo" src="./afbeeldingen/transavia-stories-logo.png" alt="logo"></a></li>
+      <li>
+        <a href="filter.html">Bladeren</a>
+      </li>
+      <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+      <li><a href="leeslijst.html"><i class="fa fa-bookmark" aria-hidden="true"></i></a><a href="#" class="bookmarkCount"></a></li>
+      <li><a href="aanmeldpagina.html"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+  </ul>
+</nav>
+
+<!-- Header gedeelte: search  -->
+
+<header class="home-header">
+  <aside id="directsearch" class="directsearch-toggle">
+    <h2>Welk verhaal wil je lezen?</h2>
+    <form class="search">
+        <input class="search-item" type="text" name="searchInput" value="Ik heb zin in.." id="searchField">
+        <input class="search-item" type="submit" value="Zoeken" id="submitButton">
+    </form>
+  </aside>
+</header>
+
+<!-- Content Gedeelte -->
+
+<main>
+  <section class="uitgelicht">
+    <h1>Verhaal van de dag</h1>
+    <div class="grid">  <!--Div class grid bedoeld voor styling -->
+      <article class="uitgelicht-verhaal paranoia">    <!-- Begin van een verhaal -->
+        <ul class="boven">
+          <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+          <li><i class="fa fa-bookmark-o" aria-hidden="true"></i></li>
+        </ul>
+        <header>
+          <a href="verhaal.html"><h3>Paranoia</h3></a>
+          <p class="leesduur">15 minuten - 21 april '11</p>
+        </header>
+      </article>  <!-- Eind van een verhaal -->
+    </div>
+  </section>
+
+<!-- Resultaten: Populair, Aanbevolen etc.. -->
+
+  <section class="resultaten populair">
+    <h2>Populair</h2>
+    <div class="grid">
+        <article class="verhaal">
+          <ul class="boven">
+            <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+            <li><i class="fa fa-bookmark-o" aria-hidden="true"></i></li>
+          </ul>
+          <header>
+            <a href="verhaal2.html"><h3>iPhone</h3></a>
+            <p class="leesduur">20 minuten - 21 Januari '11'</p>
+          </header>
+        </article>
+        <article class="verhaal stoned">
+          <ul class="boven">
+            <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+            <li><i class="fa fa-bookmark-o" aria-hidden="true"></i></li>
+          </ul>
+          <header>
+            <a href="verhaal3.html"><h3>Stoned</h3></a>
+            <p class="leesduur">4 minuten - 18 Februari '11'</p>
+          </header>
+        </article>
+    </div>
+  </section>
+
+  <section class="resultaten voor-jou">
+    <h2>Voor jou</h2>
+    <div class="grid-drie">
+    <article class="verhaal">
+      <ul class="boven">
+        <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+        <li><i class="fa fa-bookmark-o" aria-hidden="true"></i></li>
+      </ul>
+      <header>
+        <h3>Johan Cruijff</h3>
+        <p class="leesduur">3 minuten - 21 Januari '11'</p>
+      </header>
+    </article>
+    <article class="verhaal">
+      <ul class="boven">
+        <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+        <li><i class="fa fa-bookmark-o" aria-hidden="true"></i></li>
+      </ul>
+      <header>
+        <h3>Japan</h3>
+        <p class="leesduur">5 minuten - 1 Januari '11'</p>
+      </header>
+    </article>
+    <article class="verhaal">
+      <ul class="boven">
+        <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+        <li><i class="fa fa-bookmark-o" aria-hidden="true"></i></li>
+      </ul>
+      <header>
+        <h3>Verassing</h3>
+        <p class="leesduur">3 minuten - 21 Januari '11'</p>
+      </header>
+    </article>
+    </div>
+  </section>
+</main>
+<aside class="popup">
+  <p>Toegevoegd aan mijn leeslijst</p>
+</aside>
+<footer>
+</footer>
+<script type="text/javascript" src="js/javascript.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>

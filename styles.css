@@ -1,0 +1,259 @@
+@font-face {
+  font-family: "Nexa Bold";
+  src:url('./fonts/Nexa Bold.otf');
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url('./fonts/Nexa Regular.otf');
+}
+
+*,body{
+  margin: 0;
+  /*overflow: hidden;*/
+}
+
+/*nav gedeelte*/
+.nav-bar{
+  background-color: white;
+  height: 70px;
+  width: 100%;
+  /*position: fixed;*/
+}
+
+.nav-functies{
+  padding-right: 11rem;
+  float: right;
+  list-style-type: none;
+  font-family: "Nexa Bold";
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+li a{
+  text-decoration: none;
+  color:#00d66c;
+  padding: 10px
+}
+
+.logo{
+  width:70px;
+  height: 100%;
+  float: left;
+  padding-left: 11rem;
+  justify-content: flex-start;
+}
+
+
+/*search gedeelte*/
+
+
+.directsearch{
+  background-color: #00d66c;
+  padding-left: 11rem;
+  padding-bottom: 1rem;
+}
+
+.directsearch h1{
+  color: white;
+  font-family: "Nexa Bold";
+  padding-top: 1rem;
+  font-size: 2.375rem;
+}
+
+  /*sub - zoek gedeelte*/
+.search{
+  padding-right: 11rem;
+}
+
+#searchField{
+height: 2.5rem;
+width: 80%;
+border: none;
+border-radius: 1.5rem;
+display: inline-block;
+flex-grow: 1;
+font-family: "Nexa Bold";
+font-size: 1rem;
+padding-left: 1.4rem;
+padding-top: .75rem;
+margin-bottom: 1rem;
+}
+
+#submitButton{
+  width: 15%;
+  box-sizing: border-box;
+  height: 2.5rem;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-family: "Nexa Bold";
+  background-color: #FF3268;
+  color: white;
+  font-size: 1rem;
+  padding-top: .75rem;
+}
+
+/*uitgebreid zoeken gedeelte*/
+.uitgebreid-filters{
+  /*display: flex;*/
+}
+
+
+select{
+  color: white;
+  font-family: "Nexa";
+  font-size: 1rem;
+  border: none;
+  margin-left: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: .75rem;
+  border-radius: .75rem;;
+
+}
+
+select:first-child{
+  background-color: #2800a0;
+}
+
+select:nth-child(2){
+  background-color: #FF3268;
+}
+
+select:nth-child(3){
+  background-color: #f3e5d8;
+}
+
+
+
+/*uitgelicht gedeelte*/
+.uitgelicht{
+  background-color: #f3e5d8;
+  padding-left: 11rem;
+  padding-right: 11rem;
+  height: 17rem;
+}
+
+.uitgelicht h2{
+  color: #2800a0;
+  font-family: "Nexa Bold";
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.uitgelicht .grid{
+  display: grid;
+  grid-template-columns: 100%
+}
+
+.uitgelicht-verhaal{
+  /*background-color: white;*/
+  background-image: url('./afbeeldingen/soccer.jpg');
+  background-size: cover;
+  background-position: bottom;
+  border-radius: .75rem;
+  /*padding-bottom: 2rem;*/
+}
+
+.uitgelicht-verhaal .metadata{
+  padding-top: 5.375rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+
+/*resultaten gedeelte*/
+.resultaten{
+  padding-left: 11rem;
+  padding-right: 11rem;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 1rem;
+}
+.resultaten h2{
+  color: #00d66c;
+  font-family: "Nexa Bold";
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.verhaal{
+  background-image: url('./afbeeldingen/soccer.jpg');
+  background-size: cover;
+  background-position: bottom;
+  border-radius: .75rem;
+  /*margin-top: 1rem;*/
+  /*float: left;*/
+  /*width: 45%;*/
+}
+
+
+.verhaal .metadata{
+  padding-top: 5.375rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+.leesduur{
+  font-family: "Nexa Bold";
+  color: #ff3268;
+}
+
+h3{
+  font-family: "Nexa Bold";
+  color: white;
+  font-size: 1.5rem;
+}
+
+p{
+  font-family: "Nexa";
+  color: white;
+}
+
+
+footer{
+  margin-top: 2rem;
+  width: 100%;
+  height: 70px;
+  background-color: #F0F0F0;
+}
+
+
+/*Tablet*/
+@media (max-width: 60em) {
+  .uitgelicht{
+    background-color: blue;
+  }
+
+  .nav-functies{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    float: right;
+    list-style-type: none;
+    font-family: "Nexa Bold";
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/*mobile*/
+@media (max-width: 30em) {
+  .uitgelicht{
+    background-color: white;
+    padding-left: 11rem;
+    padding-right: 11rem;
+    height: 17rem;
+  }
+}

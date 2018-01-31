@@ -1,0 +1,946 @@
+@font-face {
+  font-family: "Nexa Bold";
+  src:url('./fonts/Nexa Bold.otf');
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url('./fonts/Nexa Regular.otf');
+}
+
+html{
+  font-size: 16px;
+}
+
+*,body{
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  height: 100%;
+}
+
+h1, h2, h3{
+  font-family: "Nexa Bold";
+}
+h1{
+  color:#2800a0;
+}
+
+aside h2{
+  color: white;
+  padding: 1rem 1rem 0 1rem;
+  display: block;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* .datum{
+  font-family: "Nexa";
+  color: white;
+} */
+
+img.logo{
+    width:80px;
+    height: 100%;
+}
+
+nav.nav-bar{
+  padding: .5rem 8rem .5rem 8rem;
+}
+
+.uitgelicht, .resultaten, aside h2, .filter, .sorteren-sectie, .leeslijst{
+  padding: 1rem 8rem 1rem 8rem;
+}
+
+
+ul.nav-functies{
+  list-style-type: none;
+  font-family: "Nexa Bold";
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ul.nav-functies li{
+  margin-left: 1rem;
+}
+
+ul.nav-functies li:first-child{
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+nav.nav-bar ul.nav-functies li:nth-child(2){
+  margin-right: auto;
+}
+
+nav.nav-bar ul.nav-functies li a:hover{
+  color: #2800a0;
+}
+
+nav.nav-bar ul.nav-functies li a:active{
+  color: #5e40b8;
+}
+
+li a{
+  color:#00d66c;
+}
+
+section.filter p{
+  font-family: "Nexa";
+  font-size: 1rem;
+}
+
+p.leesduur{
+  font-family: "Nexa Bold";
+  color: #ff3268;
+  font-size: 1rem;
+}
+
+.home-header{
+  transition: opacity .2s ease-out, max-height .5s ease-out;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.header-clicked{
+  opacity: 1;
+  max-height: 10rem;
+}
+
+header #directsearch{
+  background-color: #00d66c;
+}
+
+#directsearch h1{
+  font-family: "Nexa Bold";
+  color: white;
+  font-size: 1rem;
+}
+
+section.resultaten .grid, section.leeslijst .grid{
+  /* display: grid; */
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+section.resultaten .grid-drie{
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+article{
+  background-size: cover;
+  background-position: bottom;
+  border-radius: .75rem;
+  box-shadow: inset 0 -0.1875em 0.0625em #606060;
+}
+
+article:hover header h3{
+  text-decoration: underline;
+}
+
+article header h3:active{
+  text-decoration: underline;
+  color: #00d66c;
+}
+
+
+section.uitgelicht{
+  background-color: #f3e5d8;
+}
+
+
+article.uitgelicht-verhaal{
+  transition:background-position 10s ease-out;
+}
+
+
+section.uitgelicht h1, section.filter h1, section.leeslijst h1{
+  font-size: 2.3rem;
+}
+
+
+section.resultaten h2{
+  color: #00d66c;
+  font-size: 1.5rem;
+}
+
+h3{
+  color: white;
+  font-size: 1.375rem;
+}
+
+article.verhaal{
+  background-image: url('./afbeeldingen/soccer.jpg');
+  transition:background-position 1s ease-in;
+}
+
+article:hover{
+  cursor: pointer;
+  background-position: top;
+}
+
+
+article.verhaal:nth-of-type(2){
+  background-image: url('./afbeeldingen/lachen.jpg');
+}
+
+
+article header{
+  padding-top: 8rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+ul.boven{
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+}
+
+ul.boven li:first-child{
+  margin-right: auto;
+}
+
+
+.fa-heart-o{
+  color: white;
+}
+
+.fa-heart{
+  color: #ff3268;
+}
+
+ .fa-bookmark-o, .fa-ellipsis-v, .fa-download{
+  color: white;
+  margin-left: 1rem;
+}
+
+.fa-bookmark-o-clicked{
+  margin-left: 1rem;
+  color: #00d66c;
+}
+
+.fa-download-clicked{
+color: #00d66c;
+}
+
+
+
+
+form.search,header.header-aanmelden, section.resultaten .grid, section.resultaten .grid-drie, section.leeslijst .grid{
+  display: grid;
+}
+
+form.search{
+  /* display: grid; */
+  grid-template-columns:4fr 1fr;
+  grid-gap: 2rem;
+  padding: 0 8rem 0 8rem;
+}
+
+form.search input:first-child{
+  background-color: white;
+  height: 1.5rem;
+  font-family: "Nexa";
+  font-size: 1rem;
+  padding: .5rem;
+  padding-left: 1rem;
+  border: none;
+  border-radius: 2rem;
+}
+
+form.search input[type=submit]{
+  background-color: #ff3268;
+  font-family: "Nexa Bold";
+  color: white;
+  font-size: 1rem;
+  padding: .5rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: inset 0 -0.1875em 0.0625em #ca2b55;
+  flex-grow: 2;
+  margin-bottom: 1rem;
+  -webkit-appearance: none;
+   -moz-appearance:   none;
+   appearance:     none;
+}
+
+
+
+
+
+/*aanmeldpagina gedeelte*/
+
+header.header-aanmelden form fieldset, .filter form fieldset{
+  border: none;
+  margin: 0;
+}
+
+header.header-aanmelden{
+  background-color: #00d66c;
+  padding: 4rem 8rem 4rem 8rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+header.header-aanmelden form{
+  padding: 1rem;
+  border-radius: .75rem;
+  background-color: white;
+}
+
+
+header.header-aanmelden form fieldset label{
+  color: #202020;
+  font-family: "Nexa Bold";
+  display: block;
+  margin-top: 1rem;
+}
+
+header.header-aanmelden form fieldset input[type]:not([type=submit]):not([type=radio]):not([type=checkbox]) {
+  display: block;
+  height: 1.875rem;
+  background: rgba(247,247,247,0.70);
+  border: 0.063rem solid rgba(208,206,214,0.50);
+  border-radius: 0.3125rem;
+  font-family: "Nexa";
+  padding-left: 0.3125rem;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+   -moz-appearance:   none;
+   appearance:     none;
+}
+
+header.header-aanmelden form fieldset input[type]:not([type=submit]):not([type=radio]):not([type=checkbox]):valid{
+border: 0.063rem solid #00d66c;
+background-color: white;
+}
+
+header.header-aanmelden form fieldset input[type]:not([type=submit]):not([type=radio]):not([type=checkbox]):focus{
+   border: 0.063rem solid blue;
+}
+
+
+header.header-aanmelden form fieldset input[type="checkbox"]{
+  display: block;
+}
+
+header.header-aanmelden form fieldset input[type="submit"]{
+  margin-top: .7rem;
+  width: auto;
+  height: 2.5rem;
+  font-family: "Nexa Bold";
+  font-size: 1rem;
+  border-radius: 1.5rem;
+  padding: 0 1rem;
+  background: #FF3268;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: inset 0 -0.1875em 0.0625em #ca2b55;
+  margin-bottom: 1rem;
+  -webkit-appearance: none;
+   -moz-appearance:   none;
+   appearance:       none;
+}
+
+ header.header-aanmelden form fieldset input[type="submit"]:hover, form.search input[type=submit]:hover{
+  background-color: #ff658e;
+  cursor: pointer;
+}
+  header.header-aanmelden form fieldset input[type="submit"]:active, form.search input[type=submit]:active{
+    background-color: #ff658e;
+    box-shadow: inset 0 .125em .0625em #ca2b55;
+  }
+
+header.header-aanmelden form:first-of-type fieldset label:last-of-type{
+  /* color: grey; */
+  font-family: "Nexa";
+}
+
+legend{
+  font-family: "Nexa Bold";
+  font-size: 1.75rem;
+}
+
+header.header-aanmelden form:first-of-type fieldset legend{
+  color: #00d66c;
+}
+
+header.header-aanmelden form:nth-of-type(2) fieldset legend {
+  color: #2800a0;
+}
+
+ label.geslacht{
+  display: block;
+  font-family: "Nexa";
+}
+
+
+
+/*eind aanmeldpagina gedeelte*/
+
+/* filter section begin */
+
+section.filter{
+  background-color:#00d66c;
+  /* grid-gap: 1rem; */
+  padding-top: 2rem;
+  padding-bottom:2rem;
+}
+
+section.filter h1{
+  font-size: 2.375rem;
+}
+
+section.filter p {
+  font-size: 1.3rem;
+}
+
+section.filter h1, section.filter p{
+  color:white;
+  text-align: center;
+
+}
+
+section.filter form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color:white;
+  border-radius: .75rem;
+  padding: 1rem 4rem 1rem 4rem;
+}
+section.filter form fieldset legend, section.sorteren-sectie p{
+  font-size: 1.2rem;
+  color: #202020;
+  font-family: "Nexa Bold";
+}
+
+ select{
+   width: 100%;
+   height: 2.5em;
+   margin: 0;
+   padding: .5rem 1rem .5rem .3rem;
+   overflow: hidden;
+   vertical-align: middle;
+   color: #606060;
+   font-size: 1em;
+   font-family: "Nexa";
+   border: .0625rem solid #91a3b7;
+   outline: 0;
+   border-radius: .5rem;
+   background: #fff;
+   transition: border .2s linear,color .2s linear;
+   box-shadow: 0 0.1875rem 0.0625rem #91a3b7;
+   -webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+}
+
+/* filter section eind */
+
+/* begin sorteren */
+
+section.sorteren-sectie, section.leeslijst-sorteren-sectie{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-bottom: 0;
+  align-items: baseline;
+}
+
+section.sorteren-sectie p, section.leeslijst-sorteren-sectie p{
+  margin: 0 1rem 0 0;
+}
+
+section.sorteren-sectie select, section.leeslijst-sorteren-sectie select{
+  width: 15%;
+}
+
+/* eind sorteren */
+
+/* begin popup */
+
+.popup{
+  background-color: #00d66c;
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem;
+  border-radius: .75rem;
+  transition: opacity .2s ease-out, max-height .5s ease-out;
+  opacity: 0;
+  max-height: 0;
+}
+
+.popup-clicked{
+  opacity: 1;
+  max-height: 5rem;
+}
+
+.popup p{
+  font-family: "Nexa Bold";
+  color: white;
+}
+
+/* eind popup */
+
+/* begin leeslijst */
+
+section.leeslijst{
+  background-color:  #ff3268;;
+  /* width: 100%; */
+  height: 100vh;
+}
+
+section.leeslijst section.leeslijst-sorteren-sectie p, section.leeslijst h1{
+  color: white;
+  font-family: "Nexa Bold";
+}
+
+section.leeslijst section.leeslijst-sorteren-sectie select.sorteren{
+  margin-bottom: 1rem;
+  width:25%;
+}
+
+/* eind leeslijst */
+
+/* begin verhaalpagina */
+
+nav.nav-verhaal, ul.social-functies-verhaal{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: baseline;
+}
+
+nav.nav-verhaal{
+-webkit-box-shadow: 0 8px 6px -6px #999;
+-moz-box-shadow: 0 8px 6px -6px #999;
+box-shadow: 0 8px 6px -6px #999;
+padding: 1rem .5rem 1rem .5rem;
+}
+
+nav.nav-verhaal .fa {
+  color:#00d66c;
+}
+
+.social-verhaal{
+  background-color: white;
+  border-top: grey;
+  position: fixed;
+ bottom: 0;
+ width: 100%;
+ padding: 1rem;
+ -webkit-transition: bottom 2s;
+  transition: bottom 2s;
+}
+
+.social-verhaal-clicked{
+  background-color: black;
+}
+
+
+
+/* aside.social-verhaal-up{
+ bottom: 0;
+} */
+
+aside.social-verhaal ul.social-functies-verhaal li i.fa{
+  color: #00d66c;
+}
+
+aside.social-verhaal ul.social-functies-verhaal li i.fa:hover{
+  cursor: pointer;
+}
+
+/* eind verhaalpagina */
+
+/* images voor verhalen */
+
+section.uitgelicht article:first-of-type{
+  background-image: url('https://images.unsplash.com/photo-1477516561410-f0b5dd8319e4?auto=format&fit=crop&w=2089&q=80');
+}
+
+section.populair article:first-of-type{
+  background-image: url('./afbeeldingen/lachen.jpg');
+}
+
+section.populair article.stoned{
+  background-image: url('https://pre00.deviantart.net/8741/th/pre/i/2011/149/3/9/hong_kong_street___3d_effect___by_norzy-d3hhul2.jpg');
+}
+
+section.voor-jou article:first-of-type{
+  background-image: url('./afbeeldingen/soccer.jpg');
+}
+
+section.voor-jou article:nth-of-type(2){
+  background-image: url('https://api.services.trvl.com/backgrounds/images/japan_1.jpg');
+}
+
+section.voor-jou article:last-of-type{
+  background-image: url('https://aboveaverage.com/wp-content/uploads/2017/05/shutterstock_5650034172.jpg');
+}
+
+
+div.verhaal-container{
+  height: 100vh;
+}
+
+div.verhaal-img{
+  height: 100%;
+  /* background-position: top; */
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  max-width: 90rem;
+  margin: 0 auto;
+  width: 100%;
+  background-position: center 0%;
+  background-size: contain;
+}
+
+div.img-1{
+  background-image: url('./afbeeldingen/assets/SVG/verhaal1-desktop.png');
+  height: 160rem;
+}
+div.img-2{
+  background-image: url('./afbeeldingen/assets/SVG/verhaal2-desktop.png');
+  height: 75rem;
+}
+
+div.img-3{
+  background-image: url('./afbeeldingen/assets/SVG/verhaal3-desktop.png');
+  height: 205rem;
+}
+
+div.fullbar{
+  width: 100%;
+}
+
+div.progressbar{
+  height: 1rem;
+  background-color: white;
+  width: 0;
+  border-radius: .75rem .75rem 0 0;
+  text-align: center;
+  color:#00d66c;
+  font-size: .8rem;
+  padding: .4rem 0;
+  font-family: 'Nexa Bold';
+  display: none;
+  transition: height 0.2s ease-out;
+
+}
+
+.progressbar-done{
+  height: 0;
+}
+
+
+
+
+@media (min-width: 60em) {
+
+  section.uitgelicht-verhaal header{
+    padding-top: 12rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+}
+
+
+/*tablet*/
+@media only screen and (max-width: 60em) and (min-width: 30em){
+
+  /* header{
+    padding: 0;
+  } */
+
+  nav.nav-bar{
+    padding: .5rem 4rem .5rem 4rem;
+  }
+
+
+  section.uitgelicht, section.resultaten, aside h2, section.filter, section.sorteren-sectie, section.leeslijst{
+    padding: 1rem 4rem 1rem 4rem;
+  }
+
+  img.logo{
+      width:70px;
+      height: 100%;
+  }
+
+
+  section.resultaten .grid, section.resultaten .grid-drie{
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  form.search{
+    padding: 0 4rem 0 4rem;
+  }
+
+  /*aanmeldpagina gedeelte*/
+
+  header.header-aanmelden{
+    padding: 1rem 4rem;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  /*eind aanmeldpagina gedeelte*/
+
+  /* begin filteren */
+  /* eind filteren */
+
+
+  div.img-1{
+    background-image: url('./afbeeldingen/assets/SVG/verhaal1-tablet.png');
+    height: 170rem;
+  }
+
+  div.img-2{
+    background-image: url('./afbeeldingen/assets/SVG/verhaal2-tablet.png');
+    height: 75rem;
+  }
+
+  div.img-3{
+    background-image: url('./afbeeldingen/assets/SVG/verhaal3-tablet.png');
+    height: 430rem;
+  }
+
+
+}
+
+/*tussenin een mobile en tablet*/
+@media only screen and (max-width: 40em) and (min-width: 30em) {
+
+  section.resultaten .grid, section.resultaten .grid-drie, section.leeslijst .grid{
+    /* display: grid; */
+    grid-template-columns: 100%;
+    grid-gap: 1rem;
+  }
+
+  header.header-aanmelden{
+    padding: 1rem 4rem;
+    /* display: grid; */
+    grid-template-columns: 100%;
+    grid-gap: 1rem;
+  }
+
+  /* begin fileren */
+
+  section.filter h1{
+    font-size: 1.7rem;
+  }
+
+  section.filter p {
+    font-size: 1rem;
+  }
+
+  section.filter form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+
+  section.filter form fieldset select{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* eind filteren*/
+
+  /* sorteren */
+
+  section.sorteren-sectie{
+    justify-content: flex-start;
+  }
+
+  section.sorteren-sectie select{
+    width: 25%;
+  }
+
+  /* eind sorteren */
+
+}
+
+
+/*mobile*/
+@media (max-width: 30em) {
+
+
+  ul.nav-functies li a {
+    font-size: .9rem;
+  }
+
+  img.logo{
+      width:60px;
+      height: 100%;
+  }
+
+  nav.nav-bar, section.filter, nav.nav-verhaal, ul.social-functies-verhaal, section.sorteren-sectie, section.leeslijst{
+    padding: .5rem 1rem .5rem 1rem;
+  }
+
+  section.filter h1{
+    font-size: 2rem;
+  }
+
+  section.filter p{
+    font-size: 1rem;
+  }
+
+  aside h2{
+    padding: 1rem 1rem 0rem 1rem;
+  }
+
+  form.search{
+    /* display: grid; */
+    grid-template-columns: 100%;
+    grid-gap: 1rem;
+    padding: 0 1rem 0 1rem;
+  }
+
+  section.resultaten{
+    padding: 1rem;
+  }
+
+  section.resultaten .grid, section.resultaten .grid-drie, section.leeslijst .grid{
+    grid-template-columns: 100%;
+    grid-gap: 1rem;
+  }
+
+  section.uitgelicht{
+    padding: 1rem;
+  }
+
+
+  /*aanmeldpagina gedeelte*/
+
+  header.header-aanmelden{
+    padding: 1rem 1rem;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns:100%;
+    grid-gap: 1rem;
+  }
+
+  /*eind aanmeldpagina gedeelte*/
+
+  /* begin fileren */
+
+  section.filter h1{
+    font-size: 1.7rem;
+  }
+
+  section.filter p {
+    font-size: 1rem;
+  }
+
+  section.filter form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+
+  section.filter form fieldset select{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* eind filteren*/
+
+  /* sorteren */
+
+  section.sorteren-sectie{
+    justify-content: flex-start;
+  }
+
+  section.sorteren-sectie select{
+    width: 25%;
+  }
+
+  /* eind sorteren */
+
+  /* begin popup */
+  .popup{
+    background-color: #00d66c;
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    border-radius: .75rem;
+    transition: opacity .2s ease-out, max-height .5s ease-out;
+    opacity: 0;
+    max-height: 0;
+  }
+
+  .popup-clicked{
+    opacity: 1;
+    max-height: 5rem;
+  }
+
+
+  /* eind popup */
+
+  section.uitgelicht h1, section.filter h1, section.leeslijst h1{
+    font-size: 1.8rem;
+  }
+
+  /* begin leeslijst */
+
+  section.leeslijst{
+    background-color:  #ff3268;;
+    height: 100vh;
+  }
+
+  section.leeslijst section.sorteren-sectie select{
+    width: 30%;
+  }
+
+  /* eind leeslijst */
+
+  div.img-1{
+    background-image: url('./afbeeldingen/assets/SVG/verhaal1-mobile.png');
+    height: 115rem;
+  }
+
+  div.img-2{
+    background-image: url('./afbeeldingen/assets/SVG/verhaal2-mobile.png');
+    height: 75rem;
+  }
+
+  div.img-3{
+    background-image: url('./afbeeldingen/assets/SVG/verhaal3-mobile.png');
+    height: 300rem;
+  }
+
+
+
+
+}

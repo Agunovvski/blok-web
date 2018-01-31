@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aanmeldpagina</title>
+  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body-aanmeldpagina">
+
+  <!-- Nav gedeelte -->
+
+  <nav class="nav-bar">
+    <ul class="nav-functies">
+        <li><a href="index.html"><img class="logo" src="./afbeeldingen/transavia-stories-logo.png" alt="logo"></a></li>
+        <li>
+          <a href="filter.html">Bladeren</a>
+        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+        <li><a href="leeslijst.html"><i class="fa fa-bookmark" aria-hidden="true"></i></a><a href="#" class="bookmarkCount"></a></li>
+        <li><a href="aanmeldpagina.html"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+    </ul>
+  </nav>
+
+<header class="header-aanmelden">
+  <form>
+    <fieldset>
+      <legend>Inloggen</legend>
+      <label for="inloggen-gebruikersnaam">Gebruikersnaam</label>
+      <input type="text" name="inloggen-gebruikersnaam" placeholder="Gebruikersnaam" id="inloggen-gebruikersnaam" required>
+      <label for="inloggen-wachtwoord">Wachtwoord</label>
+      <input type="password" name="inloggen-wachtwoord" placeholder="Wachtwoord" id="inloggen-wachtwoord" required>
+      <label for="inloggen-check">Wachtwoord onthouden</label>
+      <input type="checkbox" name="inloggen-check" id="inloggen-check">
+      <input type="submit" value="Inloggen" class="submitInloggen">
+    </fieldset>
+  </form>
+  <form>
+    <fieldset>
+      <legend>Nog geen account?</legend>
+      <label for="registreren-gebruikersnaam">Gebruikersnaam *</label>
+      <input type="text" name="registreren-gebruikersnaam" id="registreren-gebruikersnaam" placeholder="Gebruikersnaam" required>
+      <label for="registreren-email">E-mailadres *</label>
+      <input type="email" name="registreren-email" id="registreren-email"  placeholder="E-mailadres" required>
+      <label>Geslacht</label>
+      <label for="registreren-geslacht-man" class="geslacht">Man</label>
+      <input type="radio" name="gender" value="man" id="registreren-geslacht-man">
+      <label for="registreren-geslacht-vrouw" class="geslacht">Vrouw</label>
+      <input type="radio" name="gender" value="vrouw" id="registreren-geslacht-vrouw">
+      <label for="registreren-wachtwoord">Wachtwoord *</label>
+      <input type="password" name="registreren-wachtwoord" id="registreren-wachtwoord" placeholder="Wachtwoord" required>
+      <input type="submit" value="Registreren" class="submitRegistreren">
+    </fieldset>
+  </form>
+</header>
+<script type="text/javascript" src="js/javascript.js"></script>
+</body>
+</html>
